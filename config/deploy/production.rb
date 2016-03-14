@@ -49,6 +49,7 @@
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
+server '52.27.255.106', user: 'deploy', roles: %w{web app db}
 # server 'example.com',
 #   user: 'user_name',
 #   roles: %w{web app},
