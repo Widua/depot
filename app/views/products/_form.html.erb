@@ -19,6 +19,10 @@
     <%= f.label :description %><br>
     <%= f.text_area :description, rows: 6 %>
   </div>
+  <div class='field'>
+    <%= f.label :locale %>
+    <%= f.select :locale, LANGUAGES %>
+  </div>
   <div class="field">
     <%= f.label :image_url %><br>
     <%= f.text_field :image_url %>

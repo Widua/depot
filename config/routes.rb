@@ -1,5 +1,19 @@
 Rails.application.routes.draw do
+  get 'admin' => 'admin#index'
+
+  controller :sessions do
+    get 'login' => :new
+    post 'login' => :create
+    delete 'logout' => :destroy
+  end
+
   resources :products
+  resources :users
+  resources :orders
+  resources :line_items
+  resources :carts
+  root to: 'store#index', as: 'store', via: :all
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
