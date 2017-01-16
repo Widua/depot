@@ -3,7 +3,6 @@ lock '3.4.0'
 
 set :application,   'depot'
 set :repo_url,      'git@github.com:Widua/depot.git'
-set :deploy_to,     "/var/www/apps/#{fetch(:application)}"
 
 ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
